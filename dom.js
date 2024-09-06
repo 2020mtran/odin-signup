@@ -1,4 +1,6 @@
 document.body.style.margin = "0";
+document.body.style.fontFamily = "Tahoma, sans-serif";
+
 
 const page = document.querySelector(".page");
 
@@ -53,7 +55,7 @@ first.innerHTML = `This is not a real online service! You know you need somethin
 Sign up <em>now</em> to get started. <br>
 <br>
 You <em>know</em> you want to.`;
-first.style.padding = "100px 200px 50px 50px";
+first.style.padding = "75px 200px 50px 50px";
 first.style.fontSize = "24px";
 first.style.fontWeight = "bold";
 
@@ -81,7 +83,7 @@ secondForm.style.display = "flex";
 secondForm.style.flexDirection = "row";
 secondForm.style.gap = "100px";
 secondForm.style.flexWrap = "wrap";
-secondForm.style.width = "600px";
+secondForm.style.width = "700px";
 secondForm.style.rowGap = "20px";
 
 const firstNameDiv = document.createElement("div");
@@ -100,7 +102,7 @@ const firstName = document.createElement("input");
 firstName.setAttribute("type", "text");
 firstName.setAttribute("name", "userFirstName");
 firstName.setAttribute("placeholder", "Violet");
-firstName.style.width = "200px";
+firstName.style.width = "250px";
 
 firstNameDiv.append(firstName);
 secondForm.append(firstNameDiv);
@@ -121,7 +123,7 @@ const lastName = document.createElement("input");
 lastName.setAttribute("type", "text");
 lastName.setAttribute("name", "userLastName");
 lastName.setAttribute("placeholder", "Evergarden");
-lastName.style.width = "200px";
+lastName.style.width = "250px";
 
 lastNameDiv.append(lastName);
 secondForm.append(lastNameDiv);
@@ -140,10 +142,29 @@ const email = document.createElement("input");
 email.setAttribute("type", "text");
 email.setAttribute("email", "userEmail");
 email.setAttribute("placeholder", "AutoMemoryDoll@gmail.com");
-email.style.width = "200px";
+email.style.width = "250px";
 
 emailDiv.append(email);
 secondForm.append(emailDiv);
+
+const phoneDiv = document.createElement("div");
+phoneDiv.style.display = "flex";
+phoneDiv.style.flexDirection = "column";
+
+const labelPhone = document.createElement("label");
+labelPhone.setAttribute("for", "userPhone");
+labelPhone.textContent = "Phone";
+
+phoneDiv.append(labelPhone);
+
+const phone = document.createElement("input");
+phone.setAttribute("type", "text");
+phone.setAttribute("name", "userPhone");
+phone.setAttribute("placeholder", "383-742-7336");
+phone.style.width = "250px";
+
+phoneDiv.append(phone);
+secondForm.append(phoneDiv);
 
 const passwordDiv = document.createElement("div");
 passwordDiv.style.display = "flex";
@@ -159,15 +180,70 @@ const password = document.createElement("input");
 password.setAttribute("type", "text");
 password.setAttribute("password", "userPassword");
 password.setAttribute("placeholder", "akatsuki!Kana");
-password.style.width = "200px";
+password.style.width = "250px";
 
 passwordDiv.append(password);
 secondForm.append(passwordDiv);
 
+const passwordConfirmDiv = document.createElement("div");
+passwordConfirmDiv.style.display = "flex";
+passwordConfirmDiv.style.flexDirection = "column";
+
+const labelPasswordConfirm = document.createElement("label");
+labelPasswordConfirm.setAttribute("for", "userPasswordConfirm")
+labelPasswordConfirm.textContent = "Confirm Password";
+
+passwordConfirmDiv.append(labelPasswordConfirm);
+
+const passwordConfirm = document.createElement("input");
+passwordConfirm.setAttribute("type", "text");
+passwordConfirm.setAttribute("password", "userPasswordConfirm");
+passwordConfirm.setAttribute("placeholder", "akatasuki!Kana");
+passwordConfirm.style.width = "250px";
+
+passwordConfirmDiv.append(passwordConfirm);
+secondForm.append(passwordConfirmDiv);
 
 second.append(secondForm);
 
 right.append(second);
+
+const third = document.createElement("div");
+
+third.style.display = "flex";
+third.style.flexDirection = "column";
+
+const createAccountBtn = document.createElement("button");
+
+createAccountBtn.style.display = "flex";
+createAccountBtn.style.justifyContent = "center";
+createAccountBtn.style.alignItems = "center";
+createAccountBtn.style.backgroundColor = "#038cfc";
+createAccountBtn.textContent = "Create Account";
+createAccountBtn.style.fontFamily = "Tahoma, sans-serif";
+createAccountBtn.style.color = "white";
+createAccountBtn.style.width = "225px";
+createAccountBtn.style.padding = "15px 0";
+createAccountBtn.style.margin = "0px 200px 20px 50px";
+createAccountBtn.style.borderRadius = "10px";
+
+third.append(createAccountBtn);
+
+const alreadyHave = document.createElement("div");
+
+alreadyHave.textContent = "Already have an account?";
+alreadyHave.style.padding = "0px 200px 25px 50px";
+
+const toLogin = document.createElement("a");
+toLogin.textContent = "Log in";
+toLogin.style.color = "#038cfc";
+toLogin.style.padding = "0 5px";
+
+alreadyHave.append(toLogin);
+
+third.append(alreadyHave);
+
+right.append(third);
 
 page.append(left);
 page.append(right);
