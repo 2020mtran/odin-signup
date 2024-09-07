@@ -102,6 +102,7 @@ const firstName = document.createElement("input");
 firstName.setAttribute("type", "text");
 firstName.setAttribute("name", "userFirstName");
 firstName.setAttribute("placeholder", "Violet");
+firstName.setAttribute("required", "")
 firstName.style.width = "250px";
 
 firstNameDiv.append(firstName);
@@ -123,6 +124,7 @@ const lastName = document.createElement("input");
 lastName.setAttribute("type", "text");
 lastName.setAttribute("name", "userLastName");
 lastName.setAttribute("placeholder", "Evergarden");
+lastName.setAttribute("required", "")
 lastName.style.width = "250px";
 
 lastNameDiv.append(lastName);
@@ -142,6 +144,7 @@ const email = document.createElement("input");
 email.setAttribute("type", "text");
 email.setAttribute("email", "userEmail");
 email.setAttribute("placeholder", "AutoMemoryDoll@gmail.com");
+email.setAttribute("required", "")
 email.style.width = "250px";
 
 emailDiv.append(email);
@@ -161,6 +164,7 @@ const phone = document.createElement("input");
 phone.setAttribute("type", "text");
 phone.setAttribute("name", "userPhone");
 phone.setAttribute("placeholder", "383-742-7336");
+phone.setAttribute("required", "")
 phone.style.width = "250px";
 
 phoneDiv.append(phone);
@@ -180,6 +184,7 @@ const password = document.createElement("input");
 password.setAttribute("type", "text");
 password.setAttribute("password", "userPassword");
 password.setAttribute("placeholder", "akatsuki!Kana");
+password.setAttribute("required", "")
 password.style.width = "250px";
 
 passwordDiv.append(password);
@@ -199,6 +204,7 @@ const passwordConfirm = document.createElement("input");
 passwordConfirm.setAttribute("type", "text");
 passwordConfirm.setAttribute("password", "userPasswordConfirm");
 passwordConfirm.setAttribute("placeholder", "akatasuki!Kana");
+passwordConfirm.setAttribute("required", "")
 passwordConfirm.style.width = "250px";
 
 passwordConfirmDiv.append(passwordConfirm);
@@ -221,11 +227,14 @@ createAccountBtn.style.alignItems = "center";
 createAccountBtn.style.backgroundColor = "#038cfc";
 createAccountBtn.textContent = "Create Account";
 createAccountBtn.style.fontFamily = "Tahoma, sans-serif";
+createAccountBtn.style.fontWeight = "bold";
+createAccountBtn.style.fontSize = "15px";
 createAccountBtn.style.color = "white";
 createAccountBtn.style.width = "225px";
 createAccountBtn.style.padding = "15px 0";
 createAccountBtn.style.margin = "0px 200px 20px 50px";
 createAccountBtn.style.borderRadius = "10px";
+createAccountBtn.style.borderColor = "#038cfc";
 
 third.append(createAccountBtn);
 
